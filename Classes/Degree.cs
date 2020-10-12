@@ -11,6 +11,8 @@ namespace Student_Management_System
         public string DegreeName { get; set; }
         public int DegreeId { get; set; }
         public int Years { get; set; }
+        public object StudentDegree { get; internal set; }
+        public object CourseDegree { get; internal set; }
     }
 }
 
@@ -19,7 +21,7 @@ public class Course : Degree
 {
     public string CourseName { get; set; }
     public int DurationMonths { get; set; }
-    public object CourseDegree { get; internal set; }
+   
 }
 
 
@@ -43,7 +45,7 @@ public class Person : PersonRules
     public string DegreeName { get; set; }
 }
 
-public class Student : PersonRules
+public class Student : Degree
 {
     public int id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     public string Surname { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
@@ -52,7 +54,7 @@ public class Student : PersonRules
     public string FirstName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     public string MiddleName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     public string DegreeName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public object StudentDegree { get; internal set; }
+
 }
 
 public class Lecturer : PersonRules
