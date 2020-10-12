@@ -3,6 +3,7 @@ using Student_Management_System;
 using Student_Management_System.Classes;
 using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 
 namespace Student_Management_System
 {
@@ -76,7 +77,7 @@ public class Lecturer : PersonRules
     public string DegreeName { get; set; }
 }
 
-class Program
+/* class Program
 {
     static void Main(string[] args)
     {
@@ -170,7 +171,7 @@ class Program
         course.CourseDegree = null;
     }
 }
-
+*/
 
 
 
