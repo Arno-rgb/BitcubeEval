@@ -15,8 +15,7 @@ namespace Student_Management_System
 {
     public partial class Lecturer_registration_form : Form
     {
-        string connectionString = @"Data Source = (localdb)\MSSQLLocalDB;Initial Catalog = StudentDB; Integrated Security=True;";
-        private object dtbl;
+        string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=StudentDB;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         public Lecturer_registration_form()
         {

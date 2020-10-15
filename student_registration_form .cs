@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Student_Management_System
 {
     public partial class student_registration_form : Form
     {
-        string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog = StudentDB; Integrated Security=True;";
-        private object dtbl;
+        
 
         public student_registration_form()
         {
@@ -36,18 +36,21 @@ namespace Student_Management_System
         }
 
         private void button5_Click(object sender, EventArgs e)
-        {
-            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+        { 
+        
+            SqlConnection connect = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=StudentDB;Integrated Security=True;");
+            SqlCommand command;
+            SqlDataReader reader;
+            command = new SqlCommand();
+            connect.Open();
+            command.Connection = connect;
+            command.CommandText = " select * from Student";
+            reader = command.ExecuteReader();
+            while (reader.Read())
             {
-                sqlCon.Open();
-                SqlDataAdapter sqlDa = new SqlDataAdapter("Select * FROM Student", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill((DataTable)dtbl);
-
-                dataGridView1.DataSource = dtbl;
-
-
+                listBox1.Items.Add(reader["fullName"]);
             }
+            connect.Close();
         }
     }
 }

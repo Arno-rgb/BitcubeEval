@@ -6,17 +6,16 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Entity.Core;
 
 namespace Student_Management_System
 {
     class DataAccess
     {
-        public List<Student> GetStudents(string Surname)
+        public List<Student> GetStudents(string lastName)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("StudentDB")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(Helper.CnnVal("Student")))
             {
-                return connection.Query<Student>($"select * from Student where Surname = '{ Surname }'").ToList();
+                return connection.Query<Student>($"select * from Student where lastname = '{ lastName }'").ToList();
             }
         }
     }
