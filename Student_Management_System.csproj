@@ -14,6 +14,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -106,8 +121,11 @@
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.IdentityModel.Tokens.5.5.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenAI_API, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\OpenAI.1.1.0\lib\netstandard2.0\OpenAI_API.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -188,6 +206,54 @@
     </Compile>
     <Compile Include="DataAccess.cs" />
     <Compile Include="Classes\Degree.cs" />
+    <Compile Include="Degrees\Accounting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Degrees\Accounting.Designer.cs">
+      <DependentUpon>Accounting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Degrees\Biology.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Degrees\Biology.Designer.cs">
+      <DependentUpon>Biology.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Degrees\Computer Science.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Degrees\Computer Science.Designer.cs">
+      <DependentUpon>Computer Science.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Degrees\Criminology.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Degrees\Criminology.Designer.cs">
+      <DependentUpon>Criminology.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Degrees\Economy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Degrees\Economy.Designer.cs">
+      <DependentUpon>Economy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Degrees\Law.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Degrees\Law.Designer.cs">
+      <DependentUpon>Law.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Degrees\Maths.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Degrees\Maths.Designer.cs">
+      <DependentUpon>Maths.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Degrees\Psychology.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Degrees\Psychology.Designer.cs">
+      <DependentUpon>Psychology.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +282,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Student.cs" />
+    <Compile Include="SchoolDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="student_registration_form .cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,6 +324,7 @@
       <DependentUpon>student_registration_form .cs</DependentUpon>
     </EmbeddedResource>
     <None Include=".editorconfig" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -263,9 +335,41 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SchoolDataSet.xsc">
+      <DependentUpon>SchoolDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchoolDataSet.xss">
+      <DependentUpon>SchoolDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="School.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="School_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>School.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
