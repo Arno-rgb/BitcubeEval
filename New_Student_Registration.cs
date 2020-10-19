@@ -21,5 +21,12 @@ namespace Student_Management_System
         {
             this.Dispose();
         }
+
+        private void New_Student_Registration_Form_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'schoolDataSet.Student' table. You can move, or remove it, as needed.
+            this.studentTableAdapter.Fill(this.schoolDataSet.Student);
+
+        }
     }
 }

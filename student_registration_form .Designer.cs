@@ -302,7 +302,6 @@
             this.Name = "student_registration_form";
             this.Text = "student_Registrationform";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.student_registration_form_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel6.ResumeLayout(false);

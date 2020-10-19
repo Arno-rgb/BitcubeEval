@@ -76,7 +76,7 @@ namespace Student_Management_System
 
         private void button8_Click(object sender, EventArgs e)
         {
-            using (Degrees.Psychology pshy = new Student_Management_System.Degrees.Psychology{())
+            using (Degrees.Psychology pshy = new Student_Management_System.Degrees.Psychology())
             {
                 pshy.ShowDialog();
             }

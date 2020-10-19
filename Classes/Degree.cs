@@ -10,10 +10,7 @@ namespace Student_Management_System
     public class Degree
     {
         public string DegreeName { get; set; }
-        public int DegreeId { get; set; }
         public int Years { get; set; }
-        public object StudentDegree { get; internal set; }
-        public object CourseDegree { get; internal set; }
     }
 }
 
