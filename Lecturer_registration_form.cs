@@ -42,13 +42,13 @@ namespace Student_Management_System
             {
                 sqlCon.Open();
                 SqlDataAdapter sqlDa = new SqlDataAdapter("Select * FROM Lecturer", sqlCon);
-                DataTable dtbl = new DataTable();
-                sqlDa.Fill((DataTable)dtbl);
+                DataTable dtbl1 = new DataTable();
+                sqlDa.Fill((DataTable)dtbl1);
 
-                dataGridView1.DataSource = dtbl;
+                dataGridView1.DataSource = dtbl1;
 
 
             }
         }
-    } 
+    }
 }

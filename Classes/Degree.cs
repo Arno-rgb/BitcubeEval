@@ -46,12 +46,12 @@ public class Person : PersonRules
 public class Student : Degree
 {
     public int id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public string first_name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     public string Surname { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     public string DateofBirth { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     public string Email { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public string FirstName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     public string MiddleName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public string DegreeName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public new string DegreeName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
 }
 
@@ -117,57 +117,6 @@ public class Lecturer : PersonRules
     }
 
 
-    private List<Student> students = new List<Student>();
-
-    public bool Contains(Student student)
-    {
-        return this.students.Contains(student);
-    }
-
-    public void Add(Student student)
-    {
-        if (!Contains(student))
-            this.students.Add(student);
-        student.StudentDegree = this;
-    }
-
-    public void Remove(Student student)
-    {
-        if (Contains(student))
-            this.students.Remove(student);
-
-
-        if (student.StudentDegree != this)
-            return;
-
-        student.StudentDegree = null;
-    }
-    private List<Course> courses = new List<Course>();
-
-    public bool Contains(Course course)
-    {
-        return this.courses.Contains(course);
-    }
-
-    public void Add(Course course)
-    {
-        if (!Contains(course))
-            this.courses.Add(course);
-        course.CourseDegree = this;
-    }
-
-    public void Remove(Course course)
-    {
-        if (Contains(course))
-            this.courses.Remove(course);
-
-
-        if (course.CourseDegree != this)
-            return;
-
-        course.CourseDegree = null;
-    }
-}
 */
 
 

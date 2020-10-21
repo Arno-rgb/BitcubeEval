@@ -24,12 +24,20 @@ namespace Student_Management_System
         {
 
         }
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string L_or_S = listBox1.SelectedItem.ToString();
+
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             using (Dashboard dash = new Dashboard())
             {
-                dash.ShowDialog();
+                {
+                    dash.ShowDialog();
+                }
+                
             }
         }
 
@@ -73,5 +81,6 @@ namespace Student_Management_System
             SqlDataReader rd = com.ExecuteReader();
 
         }
+
     }
 }

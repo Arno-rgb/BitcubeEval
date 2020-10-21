@@ -48,24 +48,7 @@ namespace Student_Management_System
 
 
             }
-
-            /*SqlConnection connect = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=StudentDB;Integrated Security=True;");
-            SqlCommand command;
-            SqlDataReader reader;
-            command = new SqlCommand();
-            connect.Open();
-            command.Connection = connect;
-            command.CommandText = " select * from Student";
-            DataTable dtbs = new DataTable();
-            sqlDaStudent.Fill((DataTable)dtbs);
-            reader = command.ExecuteReader();
-            sqlDaStudent.Fill((DataTable)dtbs);
-
-            dataGridView1.DataSource = dtbs;
-            
-            connect.Close();*/
         }
-
     }
 }
 
