@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ImTools;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,9 +16,12 @@ namespace Student_Management_System
     {
         private bool dragging = false;
         private Point startPoint = new Point(0, 0);
-        public Login()
+
+
+    public Login()
         {
             InitializeComponent();
+           
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -26,12 +30,12 @@ namespace Student_Management_System
         }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string L_or_S = listBox1.SelectedItem.ToString();
-
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+          
             using (Dashboard dash = new Dashboard())
             {
                 {
