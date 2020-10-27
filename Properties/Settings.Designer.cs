@@ -33,5 +33,16 @@ namespace Student_Management_System.Properties {
                 return ((string)(this["SchoolConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=StudentDB;Integrated Security=" +
+            "True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False")]
+        public string StudentDBConnectionString {
+            get {
+                return ((string)(this["StudentDBConnectionString"]));
+            }
+        }
     }
 }

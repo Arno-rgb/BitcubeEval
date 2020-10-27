@@ -358,6 +358,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "New_Lecturer_Registration_Form";
             this.Text = "New_Student_Registration";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.New_Lecturer_Registration_Form_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.New_Lecturer_Registration_Form_MouseMove_1);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.New_Lecturer_Registration_Form_MouseDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

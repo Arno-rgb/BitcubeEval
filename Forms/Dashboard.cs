@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Student_Management_System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,9 +25,9 @@ namespace Student_Management_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            using (student_registration_form student_res=  new Student_Management_System.student_registration_form())
+            using (Student_form student=  new Student_Management_System.Student_form())
             {
-                student_res.ShowDialog();
+                student.ShowDialog();
             }
         }
 
@@ -45,5 +46,18 @@ namespace Student_Management_System
                 courses_res.ShowDialog();
             }
         }
+
+        private void btn_LogOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login fl = new Login();
+            fl.Show();
+        }
+
+        private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }

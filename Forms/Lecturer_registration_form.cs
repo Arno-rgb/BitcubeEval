@@ -15,7 +15,9 @@ namespace Student_Management_System
 {
     public partial class Lecturer_registration_form : Form
     {
-        string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=StudentDB;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        private bool dragging = false;
+        private Point startPoint = new Point(0, 0);
+        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\arnom\Source\Repos\Student_Management_System\Test1.mdf;Integrated Security=True";
 
         public Lecturer_registration_form()
         {
@@ -50,5 +52,25 @@ namespace Student_Management_System
 
             }
         }
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            dragging = true;
+            startPoint = new Point(e.X, e.Y);
+        }
+
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+            dragging = false;
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (dragging)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this.startPoint.X, p.Y - this.startPoint.Y);
+            }
+        }
+
     }
 }

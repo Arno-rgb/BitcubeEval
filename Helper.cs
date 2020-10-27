@@ -10,9 +10,9 @@ namespace Student_Management_System
 {
     public static class Helper
     {
-        public static string CnnVal(string name)
+        public static string CnnVal(string StudentDB)
         {
-            return ConfigurationManager.ConnectionStrings[name].ConnectionString;
+            return ConfigurationManager.ConnectionStrings[StudentDB].ConnectionString;
         }
     }
 }
