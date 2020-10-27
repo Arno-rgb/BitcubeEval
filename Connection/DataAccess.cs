@@ -12,7 +12,7 @@ namespace Student_Management_System
 {
     class DataAccess
     {
-        public static string stringConnection = "Data Source = DESKTOP-HS8CGAC\\LOCALDB#FB4CECBE; Initial Catalog=Test.mdf;Integrated Security = True";
+        public static string stringConnection = "Data Source=DESKTOP-HS8CGAC; Initial Catalog=School;Integrated Security = True";
 
         public static DataTable executeSQL(string sql)
         {

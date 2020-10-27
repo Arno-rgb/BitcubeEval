@@ -51,13 +51,13 @@ namespace Student_Management_System
             if(!string.IsNullOrEmpty(usernameTextBox.Text)&&
                 !string.IsNullOrEmpty(passwordTextBox.Text))
             {
-                string mySql = string.Empty;
+                string mySQL = string.Empty;
 
-                mySql += "SELECT * FROM Lecturer01";
-                mySql += "WHERE Username, = '" + usernameTextBox.Text + "'";
-                mySql += "AND Password = '" + passwordTextBox.Text + "'";
+                mySQL += "SELECT * FROM Lecturer ";
+                mySQL += "WHERE UserName = '" + usernameTextBox.Text + "' ";
+                mySQL += "AND Password = '" + passwordTextBox.Text + "'";
 
-                DataTable userData = DataAccess.executeSQL(mySql);
+                DataTable userData = DataAccess.executeSQL(mySQL);
 
                 if(userData.Rows.Count > 0)
                 {
@@ -67,12 +67,12 @@ namespace Student_Management_System
 
                     this.Hide();
 
-                    Login login = new Login();
-                    login.ShowDialog();
-                    login = null;
+                    Dashboard dashboard = new Dashboard();
+                    dashboard.ShowDialog();
+                    dashboard = null;
 
                     this.Show();
-                    this.usernameTextBox.SelectAll();
+                    this.usernameTextBox.Select();
 
                 }
                 else
