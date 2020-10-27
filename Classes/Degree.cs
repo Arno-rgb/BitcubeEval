@@ -23,7 +23,7 @@ public class Course : Degree
 }
 
 
-public class Person : PersonRules
+public class Person
 {
     public int id { get; set; }
     public string Surname { get; set; }
@@ -55,7 +55,7 @@ public class Student : Degree
 
 }
 
-public class Lecturer : PersonRules
+public class Lecturer : Person
 {
     public int id { get; set; }
     public string Surname { get; set; }

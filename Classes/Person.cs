@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Student_Management_System.Classes
 {
-    public interface PersonRules
+    public interface Person
     {
          int id { get; set; }
          string Surname { get; set; }
@@ -15,7 +15,7 @@ namespace Student_Management_System.Classes
          string Email { get; set; }
          string FirstName { get; set; }
          string MiddleName { get; set; }
-         string DegreeName { get; set; }
+         string Degree { get; set; }
         
     }
 }

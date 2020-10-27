@@ -1,6 +1,6 @@
 ﻿namespace Student_Management_System
 {
-    public class Student
+    public class Student : Person
     {
         public int id { get; set; }
         public string Surname { get; set; }
