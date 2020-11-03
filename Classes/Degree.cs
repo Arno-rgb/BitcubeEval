@@ -11,6 +11,7 @@ namespace Student_Management_System
     {
         public string DegreeName { get; set; }
         public int Years { get; set; }
+        public int id { get; internal set; }
     }
 }
 
@@ -52,7 +53,7 @@ public class Student : Degree
     public string Email { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     public string MiddleName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     public new string DegreeName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
+    public string FirstName { get; internal set; }
 }
 
 public class Lecturer : Person
@@ -74,7 +75,7 @@ public class Lecturer : Person
     public string DegreeName { get; set; }
 }
 
-/* class Program
+/*class Program
 {
     static void Main(string[] args)
     {
@@ -84,10 +85,10 @@ public class Lecturer : Person
 
 
         var Degree = new List<Degree>() {
-                new Degree(){ DegreeId = 1, DegreeName="Criminology", Years = 4},
-                new Degree(){ DegreeId = 2, DegreeName="Accounting", Years = 3},
-                new Degree(){ DegreeId = 3, DegreeName="Psychology", Years = 4},
-                new Degree(){ DegreeId = 4, DegreeName="Computer Science", Years = 3}
+                new Degree(){ id = 1, DegreeName="Criminology", Years = 4},
+                new Degree(){ id = 2, DegreeName="Accounting", Years = 3},
+                new Degree(){ id = 3, DegreeName="Psychology", Years = 4},
+                new Degree(){ id = 4, DegreeName="Computer Science", Years = 3}
             };
 
         var Course = new List<Course>() {
@@ -117,7 +118,7 @@ public class Lecturer : Person
     }
 
 
+}
+
 */
-
-
 

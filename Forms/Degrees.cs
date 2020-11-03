@@ -26,7 +26,7 @@ namespace Student_Management_System
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+            private void button2_Click(object sender, EventArgs e)
         {
             using (Degrees.Accounting accounting = new Student_Management_System.Degrees.Accounting())
             {

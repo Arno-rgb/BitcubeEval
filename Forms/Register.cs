@@ -22,7 +22,7 @@ namespace Student_Management_System
 
         private void Register_Load(object sender, EventArgs e)
         {
-            SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\arnom\Source\Repos\Student_Management_System\Test1.mdf;Integrated Security=True");
+            SqlConnection cn = new SqlConnection(@"Data Source=DESKTOP-HS8CGAC;Initial Catalog=School;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             cn.Open();
         }
 

@@ -1,4 +1,5 @@
 ﻿using ImTools;
+using Microsoft.SqlServer.Management.XEvent;
 using Student_Management_System;
 using System;
 using System.Collections.Generic;
@@ -61,6 +62,7 @@ namespace Student_Management_System
 
                 if(userData.Rows.Count > 0)
                 {
+                  
                     usernameTextBox.Clear();
                     passwordTextBox.Clear();
                     showPasswordCheckBox.Checked = false;
@@ -92,8 +94,22 @@ namespace Student_Management_System
 
 
         }
-
-        private void button2_Click(object sender, EventArgs e)
+       /* protected void Page_Load(object sender, EventArgs e)
+        {
+            //string DOB;
+            if (Session["UserAuthentication"] != null)
+            {
+                Student student = (Student)Session["UserAuthentication"];
+                lbStudentNum.Text = student.StudentNumber;
+                City.Text = student.City;
+                Postcode.Text = student.Postcode;
+            }
+            else
+            {
+                Response.Redirect("Index.aspx");
+            }
+        }*/
+            private void button2_Click(object sender, EventArgs e)
         {
             Close();
         }

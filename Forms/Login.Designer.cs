@@ -36,10 +36,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Login_btn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.showPasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
@@ -80,7 +78,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(25, 241);
+            this.label4.Location = new System.Drawing.Point(25, 205);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 21);
             this.label4.TabIndex = 4;
@@ -88,7 +86,7 @@
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(132, 235);
+            this.passwordTextBox.Location = new System.Drawing.Point(132, 199);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(262, 27);
             this.passwordTextBox.TabIndex = 5;
@@ -99,7 +97,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(134, 270);
+            this.label5.Location = new System.Drawing.Point(134, 243);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 17);
             this.label5.TabIndex = 6;
@@ -132,23 +130,13 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(37, 197);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 21);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "Email";
-            // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 21;
-            this.listBox1.Location = new System.Drawing.Point(195, 301);
+            this.listBox1.Location = new System.Drawing.Point(132, 297);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(105, 25);
+            this.listBox1.Size = new System.Drawing.Size(262, 25);
             this.listBox1.TabIndex = 12;
             // 
             // usernameTextBox
@@ -157,13 +145,6 @@
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(262, 27);
             this.usernameTextBox.TabIndex = 13;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(132, 194);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(262, 27);
-            this.textBox3.TabIndex = 14;
             // 
             // linkLabel1
             // 
@@ -181,7 +162,7 @@
             // 
             this.showPasswordCheckBox.AutoSize = true;
             this.showPasswordCheckBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showPasswordCheckBox.Location = new System.Drawing.Point(283, 270);
+            this.showPasswordCheckBox.Location = new System.Drawing.Point(283, 243);
             this.showPasswordCheckBox.Name = "showPasswordCheckBox";
             this.showPasswordCheckBox.Size = new System.Drawing.Size(111, 20);
             this.showPasswordCheckBox.TabIndex = 16;
@@ -197,10 +178,8 @@
             this.ClientSize = new System.Drawing.Size(406, 523);
             this.Controls.Add(this.showPasswordCheckBox);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Login_btn);
             this.Controls.Add(this.label5);
@@ -233,10 +212,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Login_btn;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox usernameTextBox;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.CheckBox showPasswordCheckBox;
     }
